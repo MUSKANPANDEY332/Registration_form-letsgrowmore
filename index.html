@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function value() {
+            var n = document.getElementById("uname").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mob").value;
+            var userInfo = document.getElementById("userInfo");
+            info.innerHTML = "your info: " + "<br>" + 
+                "your name: " + n + "<br>" +
+                "your email: " + email + "<br>" +
+                "your mobile no. : " + mobile + "<br>";
+
+            document.getElementById("registrationForm").reset();
+        }
+    </script>
+</head>
+
+<body>
+    <form id="registrationForm" onsubmit="value(); return false;">
+        <h1>Registration form</h1>
+        username: <input type="text" placeholder="username" id="uname"><br>
+        email : <input type="email" placeholder="email" id="email"><br>
+        mobile no. :<input placeholder="mobile no." id="mob"><br>
+        <input type="submit" value="register">
+    </form>
+    <p id="info"></p>
+</body>
+
+</html>
